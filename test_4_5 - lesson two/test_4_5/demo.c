@@ -35,49 +35,49 @@
 
 //常量
 //字面常量
-#include<stdio.h>
-#define MAX 100
-int main()
-{
-	//1.字面常量
-	3.14;
-	10;
-	'a';
-	"abcdef";
-
-	//2.const修饰的常变量
-	int num1 = 10;  //变量
-	const int num2 = 20;  //常变量 - 具有常属性（不能被改变的属性） - 本质上还是变量，不能当常量使用
-	//num2 = 30;  //error
-
-
-	int arr[10] = { 0 };
-	const int n = 9;
-	//int arr2[n] = { 0 };  //error: n 本质是变量，这里是不行的
-	arr[n] = 10;
-	printf("%d\n", arr[n]);
-
-
-	//3.#define定义的标识符常量
-	//MAX = 200;  //error
-	int x = MAX;
-	printf("%d\n", x);
-
-	//4.枚举常量 - 可以一一列举的常量：比如星期、三原色、性别
-	enum Sex
-	{
-		//枚举常量初始的值  0 1 2 3 …… 依次递增 - 其值不可被更改
-		male=3,    // 0
-		female=100,  // 1
-		secret   // 2
-	};
-	enum Sex s1 = male;
-	printf("%d\n", male);
-	printf("%d\n", female);
-	printf("%d\n", secret);
-
-	return 0;
-}
+//#include<stdio.h>
+//#define MAX 100
+//int main()
+//{
+//	//1.字面常量
+//	3.14;
+//	10;
+//	'a';
+//	"abcdef";
+//
+//	//2.const修饰的常变量
+//	int num1 = 10;  //变量
+//	const int num2 = 20;  //常变量 - 具有常属性（不能被改变的属性） - 本质上还是变量，不能当常量使用
+//	//num2 = 30;  //error
+//
+//
+//	int arr[10] = { 0 };
+//	const int n = 9;
+//	//int arr2[n] = { 0 };  //error: n 本质是变量，这里是不行的
+//	arr[n] = 10;
+//	printf("%d\n", arr[n]);
+//
+//
+//	//3.#define定义的标识符常量
+//	//MAX = 200;  //error
+//	int x = MAX;
+//	printf("%d\n", x);
+//
+//	//4.枚举常量 - 可以一一列举的常量：比如星期、三原色、性别
+//	enum Sex
+//	{
+//		//枚举常量初始的值  0 1 2 3 …… 依次递增 - 其值不可被更改
+//		male=3,    // 0
+//		female=100,  // 1
+//		secret   // 2
+//	};
+//	enum Sex s1 = male;
+//	printf("%d\n", male);
+//	printf("%d\n", female);
+//	printf("%d\n", secret);
+//
+//	return 0;
+//}
 
 ////课后作业
 //#include<stdio.h>
@@ -102,3 +102,12 @@ int main()
 //	printf("Max:%d", Max(x, y));
 //	return 0;
 //}
+
+//字符串就是一串字符
+
+#include<stdio.h>
+int main()
+{
+
+	return 0;
+}
