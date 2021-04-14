@@ -79,5 +79,31 @@
 //	return 0;
 //}
 
+//字符串
+#include<stdio.h>
+//#include<string.h>
+int main()
+{
+	//定义字符串的两种方式，一定不要忘记结束标志'\0'了哦
+	char arr1[] = "abc";
+	char arr2[] = { 'a','b','c' };
+	char arr3[] = { 'a','b','c','\0' };
 
+	//printf("%s\n", arr1);
+	//printf("%s\n", arr2);
+
+	//求字符串的长度
+	printf("%d\n", strlen(arr1));
+	printf("%d\n", strlen(arr2));
+	printf("%d\n", strlen(arr3));
+	return 0;
+}
+ 
+
+//#include<stdio.h>
+//int main()
+//{
+//
+//	return 0;
+//}
 
