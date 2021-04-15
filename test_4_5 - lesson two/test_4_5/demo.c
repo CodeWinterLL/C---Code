@@ -80,30 +80,36 @@
 //}
 
 //字符串
-#include<stdio.h>
-//#include<string.h>
-int main()
-{
-	//定义字符串的两种方式，一定不要忘记结束标志'\0'了哦
-	char arr1[] = "abc";
-	char arr2[] = { 'a','b','c' };
-	char arr3[] = { 'a','b','c','\0' };
-
-	//printf("%s\n", arr1);
-	//printf("%s\n", arr2);
-
-	//求字符串的长度
-	printf("%d\n", strlen(arr1));
-	printf("%d\n", strlen(arr2));
-	printf("%d\n", strlen(arr3));
-	return 0;
-}
- 
-
 //#include<stdio.h>
+////#include<string.h>
 //int main()
 //{
+//	//定义字符串的两种方式，一定不要忘记结束标志'\0'了哦
+//	char arr1[] = "abc";
+//	char arr2[] = { 'a','b','c' };
+//	char arr3[] = { 'a','b','c','\0' };
+//
+//	//printf("%s\n", arr1);
+//	//printf("%s\n", arr2);
+//
+//	//求字符串的长度
+//	printf("%d\n", strlen(arr1));
+//	printf("%d\n", strlen(arr2));
+//	printf("%d\n", strlen(arr3));
+//
+//	int length = 0;  //求数组 arr1 的长度 - 也即是获取数组的元素个数
+//	length = sizeof(arr1) / sizeof(arr1[0]);
+//	printf("%d", length);
 //
 //	return 0;
 //}
+ 
+//转义字符
+#include<stdio.h>
+int main()
+{
+	//printf("c:\test\test.c");
+	printf("ab\nc");
+	return 0;
+}
 

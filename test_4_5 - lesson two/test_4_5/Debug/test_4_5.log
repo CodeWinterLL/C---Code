@@ -1,3 +1,2 @@
 ﻿  demo.c
-G:\Programming learning\Code\C - Code\test_4_5 - lesson two\test_4_5\demo.c(96,23): warning C4013: “strlen”未定义；假设外部返回 int
   test_4_5.vcxproj -> G:\Programming learning\Code\C - Code\test_4_5 - lesson two\Debug\test_4_5.exe
