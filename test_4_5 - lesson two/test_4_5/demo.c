@@ -81,7 +81,7 @@
 
 //字符串
 //#include<stdio.h>
-////#include<string.h>
+//#include<string.h>
 //int main()
 //{
 //	//定义字符串的两种方式，一定不要忘记结束标志'\0'了哦
@@ -109,7 +109,19 @@
 int main()
 {
 	//printf("c:\test\test.c");
-	printf("ab\nc");
+	//printf("ab\nc");
+	
+	//打印一个单引号'，为了防止其与左边的单引号组成一对
+	//printf("%c\n", '\'');  
+	//printf("%s\n", "\"");
+	//printf("c:\\test\\test.c");
+
+
+	printf("%c\n", '\130');  //8进制的130是十进制的88
+	//输出 X - ASCII码值是88
+
+	printf("")
+
 	return 0;
 }
 
