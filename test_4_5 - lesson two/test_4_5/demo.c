@@ -105,23 +105,91 @@
 //}
  
 //转义字符
+//#include<stdio.h>
+//int main()
+//{
+//	//printf("c:\test\test.c");
+//	//printf("ab\nc");
+//	
+//	//打印一个单引号'，为了防止其与左边的单引号组成一对
+//	//printf("%c\n", '\'');  
+//	//printf("%s\n", "\"");
+//	//printf("c:\\test\\test.c");
+//
+//
+//	//用编码值间接的表示字符
+//	printf("%c\n", '\101');  //8进制的130是十进制的65
+//	//输出字符 A - ASCII码值是65
+//
+//	printf("%c\n", '\141');  //8进制的141是十进制的97
+//	//输出字符 a - ASCII码值是97
+//
+//	printf("%c\n", '\x42');
+//	printf("%c\n", '\x62');
+//	printf("\x42");
+//
+//	return 0;
+//}
+//转义字符笔试题
+//#include<stdio.h>
+//#include<string.h>
+//int main()
+//{
+//	//程序输出什么呢？
+//	printf("%d\n", strlen("c:\test\328\test.c"));
+//	return 0;
+//}
+
+//选择语句
+//#include<stdio.h>
+//int main()
+//{
+//	int input
+//	if (a > b)
+//	{
+//		printf("较大值：a\n");
+//	}
+//	else
+//	{
+//		printf("较小值：b\n");
+//	}
+//	return 0;
+//}
+
+//函数
+//#include<stdio.h>
+//int add(int x, int y)
+//{
+//	return x + y;
+//}
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int sum = add(a, b);
+//	printf("sum = %d\n", sum);
+//
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+//
+//	return 0;
+//}
+
+//操作符
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 1;
+//	int b = a << 1;
+//	printf("%d\n", b);
+//	return 0;
+//}
+
 #include<stdio.h>
 int main()
 {
-	//printf("c:\test\test.c");
-	//printf("ab\nc");
-	
-	//打印一个单引号'，为了防止其与左边的单引号组成一对
-	//printf("%c\n", '\'');  
-	//printf("%s\n", "\"");
-	//printf("c:\\test\\test.c");
-
-
-	printf("%c\n", '\130');  //8进制的130是十进制的88
-	//输出 X - ASCII码值是88
-
-	printf("")
-
+	char arr[] = "abc";
+	int len;
+	len = sizeof(arr) / sizeof(arr[0]);
+	printf("len = %d\n", len);
 	return 0;
 }
-
