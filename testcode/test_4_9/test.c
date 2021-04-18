@@ -278,21 +278,21 @@
 //}
 
 //作业四：在屏幕上输出9*9乘法口诀表 -------- 第一次没有做出来
-//#include<stdio.h>
-//int main()
-//{
-//	int i = 0;
-//	int j = 0;
-//	for (i = 1; i < 10; i++)  //控制打印多少行
-//	{
-//		for (j = 1; j <= i; j++)  //控制每行打印多少个表达式
-//		{
-//			printf("%d*%d=%2d ", i, j, i * j);  //打印表达式内容
-//		}
-//		printf("\n");
-//	}
-//	return 0;
-//}
+#include<stdio.h>
+int main()
+{
+	int i = 0;
+	int j = 0;
+	for (i = 1; i < 10; i++)  //控制打印多少行
+	{
+		for (j = 1; j <= i; j++)  //控制每行打印多少个表达式
+		{
+			printf("%d*%d=%-2d ", i, j, i * j);  //打印表达式内容
+		}
+		printf("\n");
+	}
+	return 0;
+}
 
 /*作业五：猜数字游戏
 1.自动产生一个1-100之间的随机数
@@ -302,25 +302,25 @@
 3.游戏可以一直玩，除非玩家自己选择退出游戏
 */
 
-void menu()
-{
-	printf("--------------------------\n");
-	printf("------   1 - play   ------\n");
-	printf("------   0 - exit   ------\n");
-	printf("--------------------------\n");
-}
-
-#include<stdio.h>
-int main()
-{
-	while (1)
-	{
-		menu();  //打印游戏菜单
-		printf("请选择：");
-		int input;
-		scanf("%d", &input);
-		
-	}
-	
-	return 0;
-}
+//void menu()
+//{
+//	printf("--------------------------\n");
+//	printf("------   1 - play   ------\n");
+//	printf("------   0 - exit   ------\n");
+//	printf("--------------------------\n");
+//}
+//
+//#include<stdio.h>
+//int main()
+//{
+//	while (1)
+//	{
+//		menu();  //打印游戏菜单
+//		printf("请选择：");
+//		int input;
+//		scanf("%d", &input);
+//		
+//	}
+//	
+//	return 0;
+//}
