@@ -76,12 +76,32 @@ b - 10000000000000000000000000000010（原码）(-2)
 //常见关键字：
 //1.C语言提供的，不能自己创建关键字
 //2.关键字不能做变量名
+// 
+//关键字：typedef
+//#include<stdio.h>
+////把 unsigned int 重命名为 u_int，现在 u_int 也是一个类型名了
+//typedef unsigned int u_int;
+//int main()
+//{
+//	unsigned int a = 10;
+//	u_int b = 20;
+//	return 0;
+//}
+
+//关键字：static
 #include<stdio.h>
-//把 unsigned int 重命名为 u_int，现在 u_int 也是一个类型名了
-typedef unsigned int u_int;
+void test()
+{
+	static int a = 1;
+	a++;
+	printf("%d ", a);
+}
 int main()
 {
-	unsigned int a = 10;
-	u_int b = 20;
+	int i = 0;
+	for (i = 0; i < 10; i++)
+	{
+		test();
+	}
 	return 0;
 }
