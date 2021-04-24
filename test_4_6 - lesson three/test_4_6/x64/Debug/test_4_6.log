@@ -1,0 +1,12 @@
+﻿  demo.c
+G:\Programming learning\Code\C - Code\test_4_6 - lesson three\test_4_6\demo.c(163,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+G:\Programming learning\Code\C - Code\test_4_6 - lesson three\test_4_6\demo.c(163,9): message : 请考虑在格式字符串中使用“%zd”
+G:\Programming learning\Code\C - Code\test_4_6 - lesson three\test_4_6\demo.c(164,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+G:\Programming learning\Code\C - Code\test_4_6 - lesson three\test_4_6\demo.c(164,9): message : 请考虑在格式字符串中使用“%zd”
+G:\Programming learning\Code\C - Code\test_4_6 - lesson three\test_4_6\demo.c(165,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+G:\Programming learning\Code\C - Code\test_4_6 - lesson three\test_4_6\demo.c(165,9): message : 请考虑在格式字符串中使用“%zd”
+G:\Programming learning\Code\C - Code\test_4_6 - lesson three\test_4_6\demo.c(166,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+G:\Programming learning\Code\C - Code\test_4_6 - lesson three\test_4_6\demo.c(166,9): message : 请考虑在格式字符串中使用“%zd”
+  demo2.c
+  正在生成代码...
+  test_4_6.vcxproj -> G:\Programming learning\Code\C - Code\test_4_6 - lesson three\x64\Debug\test_4_6.exe
