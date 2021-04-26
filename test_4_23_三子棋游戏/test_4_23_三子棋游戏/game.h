@@ -7,12 +7,13 @@
 
 #include<stdio.h>
 //棋盘尺寸
-#define ROW 3
-#define COL 3
+#define ROW 3  //行
+#define COL 3  //列
 
 //函数声明
 
 //初始化棋盘
 void Init_Board(char board[ROW][COL]);
-//显示棋盘
+//打印棋盘
 void Display_Board(char board[ROW][COL]);
+//
