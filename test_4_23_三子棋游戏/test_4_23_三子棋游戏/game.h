@@ -6,6 +6,10 @@
 */
 
 #include<stdio.h>
+#include<stdlib.h>  //调用 rand()
+#include<time.h>
+
+
 //棋盘尺寸
 #define ROW 3  //行
 #define COL 3  //列
@@ -16,4 +20,7 @@
 void Init_Board(char board[ROW][COL]);
 //打印棋盘
 void Display_Board(char board[ROW][COL]);
-//
+//玩家走棋
+void Player_Move(char board[ROW][COL]);
+//电脑走棋
+void Computer_Move(char board[ROW][COL]);

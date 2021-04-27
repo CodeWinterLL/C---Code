@@ -15,7 +15,7 @@ void Init_Board(char board[ROW][COL])
 	{
 		for (j = 0; j < COL; j++)
 		{
-			board[i][j] = '#';  //初始化为空格
+			board[i][j] = ' ';  //初始化为空格
 		}
 	}
 }
@@ -61,6 +61,57 @@ void Display_Board(char board[ROW][COL])
 				}
 			}
 			printf("\n");
+		}
+	}
+}
+
+//玩家下棋
+void Player_Move(char board[ROW][COL])
+{
+	int x = 0;
+	int y = 0;
+	
+	while (1)
+	{
+		printf("玩家走棋（请输入棋子坐标）：>");
+		scanf("%d %d", &x, &y);
+		//判断棋子坐标合法性
+		if ((x > 0 && x < ROW + 1) && (y > 0 && y < COL + 1))
+		{
+			//判断当前坐标是否被占用
+			if (board[x - 1][y - 1] != '*')
+			{
+				//棋子坐标合法且未被占用，玩家下棋（*）
+				board[x - 1][y - 1] = '*';
+				break;  //棋子坐标输入正确，跳出循环
+			}
+			else
+			{
+				printf("\n——棋子坐标被占用，请重新输入——\n");
+			}
+		}
+		else
+		{
+			printf("\n——棋子坐标有误，请重新输入——\n");
+		}
+	}
+}
+
+//电脑走棋
+void Computer_Move(char board[ROW][COL])
+{
+	printf("电脑走棋：>\n");
+	while (1)
+	{
+		//电脑随机产生棋子坐标
+		int x = rand() % 3;  //控制 x 范围为：[0,3]
+		int y = rand() % 3;  //控制 y 范围为：[0,3]
+		//判断当前坐标是否被占用
+		if (board[x][y] != '#' && board[x][y] != '*')
+		{
+			//没有被占用，电脑下棋（#）
+			board[x][y] = '#';
+			break;  //下棋成功，跳出循环
 		}
 	}
 }

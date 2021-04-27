@@ -40,12 +40,32 @@ void game()
 	Init_Board(board);
 	//打印棋盘
 	Display_Board(board);
+	//开始游戏
+	while (1)
+	{
+		//玩家走棋
+		Player_Move(board);
+		//打印走棋后的棋盘
+		Display_Board(board);
+
+		//电脑走棋
+		Computer_Move(board);
+		//打印走棋后的棋盘
+		Display_Board(board);
+
+		//判断输赢
+	}
 
 }
 
 
 int main()
 {
+	/*用当前时间戳为随机数生成器播种，
+	* 以便每次我们跑的时候数字都不一样。
+	*/
+	srand((unsigned)time(NULL));
+
 	int input = 0;
 	do
 	{
@@ -61,6 +81,7 @@ int main()
 			break;
 		case 0:
 			printf("\n------退出游戏-----\n");
+			
 			break;
 		default:
 			printf("\n——输入有误，请重新输入——\n");
