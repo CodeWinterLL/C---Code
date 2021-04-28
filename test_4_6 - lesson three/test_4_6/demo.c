@@ -170,30 +170,44 @@ b - 10000000000000000000000000000010（原码）(-2)
 
 
 //结构体
+//#include<stdio.h>
+//
+//struct Student
+//{
+//	char name[20];  //姓名
+//	int age;  //年龄
+//	double grade;  //成绩
+//};
+//
+//int main()
+//{
+//	//定义一个结构体变量并初始化
+//	struct Student s1 = { "玛卡巴卡",20,85 };
+//	
+//	/*访问结构体变量中的成员*/
+//	
+//	//. 结构体成员访问操作符
+//	printf("name: %s age: %d grade: %lf\n", s1.name, s1.age, s1.grade);
+//	
+//	//用结构体指针访问
+//	struct Student* ps = &s1;
+//	printf("name: %s age: %d grade: %lf\n", ps->name, ps->age, ps->grade);  //->操作符
+//	//还可以这样，不过太麻烦，建议用 ->操作符 访问更直观
+//	printf("name: %s age: %d grade: %lf\n", (*ps).name, (*ps).age, (*ps).grade);
+//	
+//	return 0;
+//}
+
+
+//测试
 #include<stdio.h>
-
-struct Student
-{
-	char name[20];  //姓名
-	int age;  //年龄
-	double grade;  //成绩
-};
-
 int main()
 {
-	//定义一个结构体变量并初始化
-	struct Student s1 = { "玛卡巴卡",20,85 };
-	
-	/*访问结构体变量中的成员*/
-	
-	//. 结构体成员访问操作符
-	printf("name: %s age: %d grade: %lf\n", s1.name, s1.age, s1.grade);
-	
-	//用结构体指针访问
-	struct Student* ps = &s1;
-	printf("name: %s age: %d grade: %lf\n", ps->name, ps->age, ps->grade);  //->操作符
-	//还可以这样，不过太麻烦，建议用 ->操作符 访问更直观
-	printf("name: %s age: %d grade: %lf\n", (*ps).name, (*ps).age, (*ps).grade);
-	
+	char arr[] = { '0',50,2,3 };
+	printf("%d\n", arr[0]);
+	printf("%c\n", arr[0]);
+	printf("%c\n", arr[1]);
+	//printf("%c\n", arr[1]+'0');
+
 	return 0;
 }

@@ -7,7 +7,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>  //调用 rand()
-#include<time.h>
+#include<time.h>  //调用 time()
 
 
 //棋盘尺寸
@@ -24,3 +24,5 @@ void Display_Board(char board[ROW][COL]);
 void Player_Move(char board[ROW][COL]);
 //电脑走棋
 void Computer_Move(char board[ROW][COL]);
+//判断游戏输赢
+int Is_Win(char board[ROW][COL]);

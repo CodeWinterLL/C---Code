@@ -75,6 +75,7 @@ void Player_Move(char board[ROW][COL])
 	{
 		printf("玩家走棋（请输入棋子坐标）：>");
 		scanf("%d %d", &x, &y);
+
 		//判断棋子坐标合法性
 		if ((x > 0 && x < ROW + 1) && (y > 0 && y < COL + 1))
 		{
@@ -104,14 +105,21 @@ void Computer_Move(char board[ROW][COL])
 	while (1)
 	{
 		//电脑随机产生棋子坐标
-		int x = rand() % 3;  //控制 x 范围为：[0,3]
-		int y = rand() % 3;  //控制 y 范围为：[0,3]
+		int x = rand() % ROW;  //控制 x 范围为：[0,ROW-1]
+		int y = rand() % COL;  //控制 y 范围为：[0,COL-1]
+		
 		//判断当前坐标是否被占用
-		if (board[x][y] != '#' && board[x][y] != '*')
+		if (board[x][y] == ' ')
 		{
 			//没有被占用，电脑下棋（#）
 			board[x][y] = '#';
 			break;  //下棋成功，跳出循环
 		}
 	}
+}
+
+//判断游戏输赢
+int Is_Win(char board[ROW][COL])
+{
+
 }
