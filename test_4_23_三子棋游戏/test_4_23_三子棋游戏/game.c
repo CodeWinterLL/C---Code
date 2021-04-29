@@ -119,7 +119,81 @@ void Computer_Move(char board[ROW][COL])
 }
 
 //判断游戏输赢
-int Is_Win(char board[ROW][COL])
+char Is_Win(char board[ROW][COL])
 {
+	int i = 0;
+	int j = 0;
+	int count = 0;  //记录两两相邻棋子的比较次数
+	
+	//判断每一行上是否有相连的三颗棋子
+	for (i = 0; i < ROW; i++)  //控制行
+	{
+		//控制同一行下的每一列（数组下标 j + 1 < COL 则 j < COL - 1）
+		for (j = 0; j < COL - 1; j++)
+		{
+			//对同一行两两相邻的棋子进行比较
+			if ((board[i][j] == board[i][j + 1]) && board[i][j] != ' ')
+			{
+				count++;
+				//验证三颗棋子是否相连需要两两比较比较 2 次
+				if (count == 2)
+				{
+					//返回任一棋子的符号（如果是 * 玩家胜，是 # 电脑胜）
+					return board[i][j];
+				}
+			}
+		}
+	}
 
+	count = 0;
+	//判断每一列上是否有相连的三颗棋子
+	for (j = 0; j < COL; j++)  //控制列
+	{
+		//控制同一列下的每一行（数组下标 i + 1 < ROW 则 i < ROW - 1）
+		for (i = 0; i < ROW - 1; i++)
+		{
+			if ((board[i][j] == board[i + 1][j]) && board[i][j] != ' ')
+			{
+				count++;
+				if (count == 2)
+				{
+					return board[i][j];
+				}
+			}
+		}
+	}
+
+	count = 0;
+	//判断对角线上是否有相连的三颗棋子
+	for (i = 0; i < ROW - 1; i++)
+	{
+		for (j = 0; j < COL - 1; j++)
+		{
+			//对'\'对角线上两两相连的棋子进行比较
+			if ((board[i][j] == board[i + 1][j + 1]) && board[i][j] != ' ')
+			{
+				count++;
+				if (count == 2)
+				{
+					return board[i][j];
+				}
+			}
+		}
+		//对'/'对角线上两两相连的棋子进行比较
+
+
+	}
+
+	//判断是否平局（棋盘被占满时）
+	for (i = 0; i < ROW; i++)
+	{
+		for (j = 0; j < COL; j++)
+		{
+			//棋盘都不为空，被占满了，则为平局
+			if (board[i][j] != ' ')
+			{
+				return 1;
+			}
+		}
+	}
 }

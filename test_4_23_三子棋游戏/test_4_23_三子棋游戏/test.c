@@ -36,6 +36,7 @@ void menu()
 	printf("****** 0.exit ******\n");
 	printf("********************\n");
 }
+
 //游戏运行
 void game()
 {
@@ -45,6 +46,7 @@ void game()
 	Init_Board(board);
 	//打印棋盘
 	Display_Board(board);
+	
 	//开始游戏
 	while (1)
 	{
@@ -53,15 +55,29 @@ void game()
 		//打印走棋后的棋盘
 		Display_Board(board);
 		//判断游戏输赢
-		Is_Win(board);
-
+		char ret = Is_Win(board);
+		if (ret == '*')
+		{
+			printf("-----恭喜玩家获胜-----\n");
+			break;
+		}
+		else if (ret == '#')
+		{
+			printf("-----恭喜电脑获胜-----\n");
+			break;
+		}
+		else if (ret == 'd')
+		{
+			printf("-----游戏平局-----\n");
+			break;
+		}
 		//电脑走棋
 		Computer_Move(board);
 		//打印走棋后的棋盘
 		Display_Board(board);
 		//判断游戏输赢
-		Is_Win(board);
-
+		ret = Is_Win(board);
+		
 
 	}
 
