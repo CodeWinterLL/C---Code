@@ -25,4 +25,4 @@ void Player_Move(char board[ROW][COL]);
 //╣ГдтвъфЕ
 void Computer_Move(char board[ROW][COL]);
 //еп╤осно╥йДс╝
-int Is_Win(char board[ROW][COL]);
+char Is_Win(char board[ROW][COL]);

@@ -14,18 +14,16 @@
 *	打印走棋后的棋盘
 *	判断游戏输赢(玩家赢/电脑赢/平局)
 * 5、游戏在进行的过程中有4种状态
-*	玩家赢了
-*	电脑赢了
-*	平局
-*	都没赢，游戏继续
+*	玩家赢了 '*'
+*	电脑赢了 '#'
+*	平局 'Q'
+*	都没赢，游戏继续 'C'
 * 
 */
 /*将main函数内只留下需要运行的函数，不要实现的过程*/
 
 
 #include"game.h"
-
-
 
 
 //显示游戏开始菜单
@@ -47,6 +45,7 @@ void game()
 	//打印棋盘
 	Display_Board(board);
 	
+	char ret = 0;
 	//开始游戏
 	while (1)
 	{
@@ -55,32 +54,36 @@ void game()
 		//打印走棋后的棋盘
 		Display_Board(board);
 		//判断游戏输赢
-		char ret = Is_Win(board);
-		if (ret == '*')
+		ret = Is_Win(board);
+		if (ret != 'C')
 		{
-			printf("-----恭喜玩家获胜-----\n");
 			break;
 		}
-		else if (ret == '#')
-		{
-			printf("-----恭喜电脑获胜-----\n");
-			break;
-		}
-		else if (ret == 'd')
-		{
-			printf("-----游戏平局-----\n");
-			break;
-		}
+
 		//电脑走棋
 		Computer_Move(board);
 		//打印走棋后的棋盘
 		Display_Board(board);
 		//判断游戏输赢
 		ret = Is_Win(board);
-		
+		if (ret != 'C')
+		{
+			break;
+		}
 
 	}
-
+	if (ret == '*')
+	{
+		printf("-----恭喜玩家获胜-----\n\n");
+	}
+	else if (ret == '#')
+	{
+		printf("-----恭喜电脑获胜-----\n\n");
+	}
+	else if (ret == 'Q')
+	{
+		printf("-----游戏平局-----\n\n");
+	}
 }
 
 

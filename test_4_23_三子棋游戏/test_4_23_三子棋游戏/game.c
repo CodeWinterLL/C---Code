@@ -128,6 +128,9 @@ char Is_Win(char board[ROW][COL])
 	//判断每一行上是否有相连的三颗棋子
 	for (i = 0; i < ROW; i++)  //控制行
 	{
+		//重要：判断每一行时都要重新为这一行计算比较次数！！！
+		count = 0;
+		
 		//控制同一行下的每一列（数组下标 j + 1 < COL 则 j < COL - 1）
 		for (j = 0; j < COL - 1; j++)
 		{
@@ -145,10 +148,12 @@ char Is_Win(char board[ROW][COL])
 		}
 	}
 
-	count = 0;
 	//判断每一列上是否有相连的三颗棋子
 	for (j = 0; j < COL; j++)  //控制列
 	{
+		//重要：判断每一列时都要重新为这一列计算比较次数！！！
+		count = 0;
+		
 		//控制同一列下的每一行（数组下标 i + 1 < ROW 则 i < ROW - 1）
 		for (i = 0; i < ROW - 1; i++)
 		{
@@ -163,25 +168,16 @@ char Is_Win(char board[ROW][COL])
 		}
 	}
 
-	count = 0;
 	//判断对角线上是否有相连的三颗棋子
-	for (i = 0; i < ROW - 1; i++)
+	//1.对'\'对角线上两两相连的棋子进行比较
+	if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[i][j] != ' ')
 	{
-		for (j = 0; j < COL - 1; j++)
-		{
-			//对'\'对角线上两两相连的棋子进行比较
-			if ((board[i][j] == board[i + 1][j + 1]) && board[i][j] != ' ')
-			{
-				count++;
-				if (count == 2)
-				{
-					return board[i][j];
-				}
-			}
-		}
-		//对'/'对角线上两两相连的棋子进行比较
-
-
+		return board[0][0];
+	}
+	//2.对'/'对角线上两两相连的棋子进行比较
+	if (board[2][0] == board[1][1] && board[1][1] == board[0][2] && board[2][0] != ' ')
+	{
+		return board[2][0];
 	}
 
 	//判断是否平局（棋盘被占满时）
@@ -189,11 +185,13 @@ char Is_Win(char board[ROW][COL])
 	{
 		for (j = 0; j < COL; j++)
 		{
-			//棋盘都不为空，被占满了，则为平局
-			if (board[i][j] != ' ')
+			//棋盘有空位，游戏继续
+			if (board[i][j] == ' ')
 			{
-				return 1;
+				return 'C';
 			}
 		}
 	}
+	//棋盘没有空位，被占满了，则为平局
+	return 'Q';
 }
