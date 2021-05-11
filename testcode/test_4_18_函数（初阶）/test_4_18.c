@@ -51,26 +51,26 @@
 //	return t;
 //}
 
-int factorial_function(int num)  //递归方式求n的阶乘
-{
-	int t = num;
-	if (num > 1)  //递归的限制条件
-	{
-		return t * factorial_function(num - 1);
-	}
-	//return t;
-}
-int main()
-{
-	int n = 0;
-	printf("Please enter a value of n: ");
-	scanf("%d", &n);
-
-	int ret = factorial_function(n);  //求n的阶乘
-	printf("Tactorial is %d\n", ret);
-
-	return 0;
-}
+//int factorial_function(int num)  //递归方式求n的阶乘
+//{
+//	int t = num;
+//	if (num > 1)  //递归的限制条件
+//	{
+//		return t * factorial_function(num - 1);
+//	}
+//	//return t;
+//}
+//int main()
+//{
+//	int n = 0;
+//	printf("Please enter a value of n: ");
+//	scanf("%d", &n);
+//
+//	int ret = factorial_function(n);  //求n的阶乘
+//	printf("Tactorial is %d\n", ret);
+//
+//	return 0;
+//}
 
 
 
