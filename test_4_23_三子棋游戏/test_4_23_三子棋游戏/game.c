@@ -65,7 +65,7 @@ void Display_Board(char board[ROW][COL])
 	}
 }
 
-//玩家下棋
+//玩家下棋（棋子：*）
 void Player_Move(char board[ROW][COL])
 {
 	int x = 0;
@@ -80,7 +80,7 @@ void Player_Move(char board[ROW][COL])
 		if ((x > 0 && x < ROW + 1) && (y > 0 && y < COL + 1))
 		{
 			//判断当前坐标是否被占用
-			if (board[x - 1][y - 1] != '*')
+			if (board[x - 1][y - 1] == ' ')
 			{
 				//棋子坐标合法且未被占用，玩家下棋（*）
 				board[x - 1][y - 1] = '*';
@@ -98,7 +98,7 @@ void Player_Move(char board[ROW][COL])
 	}
 }
 
-//电脑走棋
+//电脑走棋（棋子：#）
 void Computer_Move(char board[ROW][COL])
 {
 	printf("电脑走棋：>\n");

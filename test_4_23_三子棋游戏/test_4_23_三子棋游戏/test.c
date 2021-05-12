@@ -109,7 +109,6 @@ int main()
 			break;
 		case 0:
 			printf("\n------退出游戏-----\n");
-			
 			break;
 		default:
 			printf("\n——输入有误，请重新输入——\n");

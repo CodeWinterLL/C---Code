@@ -64,57 +64,104 @@
 * 要求：自己设计以上函数的参数，返回值。
 */
 
-//初始化数组
-void init(int a[], int size)
-{
-	int i = 0;
-	for (i = 0; i < size; i++)
-	{
-		a[i] = 0;
-	}
-}
-//打印数组的每个元素
-void print(int a[], int size)
-{
-	int i = 0;
-	for (i = 0; i < size; i++)
-	{
-		printf("%d ", a[i]);
-	}
-}
-//对数组元素逆置
-void reverse(int a[], int size)
-{
-	int left = 0;
-	int right = size - 1;
-	int temp = 0;
-	while (left < right)
-	{
-		temp = a[left];
-		a[left] = a[right];
-		a[right] = temp;
-		left++;
-		right--;
-	}
-}
+////初始化数组
+//void init(int a[], int size)
+//{
+//	int i = 0;
+//	for (i = 0; i < size; i++)
+//	{
+//		a[i] = 0;
+//	}
+//}
+////打印数组的每个元素
+//void print(int a[], int size)
+//{
+//	int i = 0;
+//	for (i = 0; i < size; i++)
+//	{
+//		printf("%d ", a[i]);
+//	}
+//}
+////对数组元素逆置
+//void reverse(int a[], int size)
+//{
+//	int left = 0;
+//	int right = size - 1;
+//	int temp = 0;
+//	while (left < right)
+//	{
+//		temp = a[left];
+//		a[left] = a[right];
+//		a[right] = temp;
+//		left++;
+//		right--;
+//	}
+//}
+//
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//
+//	//计算数组元素个数
+//	int size = sizeof(arr) / sizeof(arr[0]);
+//	//初始化数组全为0
+//	//init(arr, size);
+//	//打印数组的每个元素
+//	printf("打印数组：\n");
+//	print(arr, size);
+//	//对数组元素逆置
+//	reverse(arr, size);
+//	printf("\n逆序后：\n");
+//	print(arr, size);
+//
+//	return 0;
+//}
 
-#include<stdio.h>
-int main()
-{
-	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
 
-	//计算数组元素个数
-	int size = sizeof(arr) / sizeof(arr[0]);
+//作业三：将数组A中的内容和数组B中的内容进行交换。（数组一样大）
 
-	//初始化数组全为0
-	init(arr, size);
-	//打印数组的每个元素
-	printf("打印数组：\n");
-	print(arr, size);
-	//对数组元素逆置
-	reverse(arr, size);
-	printf("\n逆序后：\n");
-	print(arr, size);
-
-	return 0;
-}
+////打印数组内容
+//void print(int arr[], int size)
+//{
+//	int i = 0;
+//	for (i = 0; i < size; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	printf("\n");
+//}
+//
+//#include<stdio.h>
+//int main()
+//{
+//	int a[5] = { 1,3,5,7,9 };
+//	int b[5] = { 2,4,6,8,10 };
+//
+//	int size = sizeof(a) / sizeof(a[0]);
+//
+//	int i = 0;
+//	int temp = 0;
+//
+//	printf("交换前：\n");
+//	printf("a:");
+//	print(a, size);
+//	printf("b:");
+//	print(b, size);
+//	
+//	//交换两数组内容
+//	for (i = 0; i < 5; i++)
+//	{
+//		temp = a[i];
+//		a[i] = b[i];
+//		b[i] = temp;
+//	}
+//
+//	printf("交换后：\n");
+//	printf("a:");
+//	print(a, size);
+//	printf("b:");
+//	print(b, size);
+//
+//	return 0;
+//}

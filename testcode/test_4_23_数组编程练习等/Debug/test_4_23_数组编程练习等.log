@@ -1,3 +1,2 @@
-﻿  test_4_23.c
-G:\Programming learning\Code\C - Code\testcode\test_4_23_数组编程练习等\test_4_23.c(82,9): warning C4013: “printf”未定义；假设外部返回 int
-  test_4_23_数组编程练习等.vcxproj -> G:\Programming learning\Code\C - Code\testcode\Debug\test_4_23_数组编程练习等.exe
+﻿MSVCRTD.lib(exe_main.obj) : error LNK2019: 无法解析的外部符号 _main，函数 "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 中引用了该符号
+G:\Programming learning\Code\C - Code\testcode\Debug\test_4_23_数组编程练习等.exe : fatal error LNK1120: 1 个无法解析的外部命令
