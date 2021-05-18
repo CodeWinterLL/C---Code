@@ -153,8 +153,7 @@
 /*ËãÊı×ª»»*/
 int main()
 {
-	int a = 5;
-	float b = 4.5f;
-
+	char a = 3;
+	char b = -128;
 	return 0;
 }
