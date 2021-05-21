@@ -151,9 +151,19 @@
 
 
 /*算数转换*/
+//int main()
+//{
+//	char a = 3;
+//	char b = -128;
+//	return 0;
+//}
+
+/*有歧义的表达式*/
 int main()
 {
-	char a = 3;
-	char b = -128;
+	int i = 1;
+	int ret = (++i) + (++i) + (++i);
+	printf("%d\n", ret);
+	printf("%d\n", i);
 	return 0;
 }
