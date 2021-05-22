@@ -81,14 +81,15 @@ int main()
 	int n = 0;
 	//钱包余额
 	int money = 20;
-	//汽水总瓶数
-	int sum = 0;
-	//全部买新汽水
+	//20元可以喝20瓶
 	n = money / price;
-	while (n)
+	//喝的汽水瓶数
+	int sum = n;
+	while (n>1)
 	{
-		sum += n;
-		n = n / 2;
+		sum += n / 2;
+		//空瓶数=用2空瓶换的汽水瓶数+不够换的空瓶数
+		n = n / 2 + n % 2;
 	}
 	printf("%d\n", sum);
 	return 0;
