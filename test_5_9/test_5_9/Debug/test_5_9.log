@@ -1,2 +1,3 @@
 ﻿  test.c
+G:\Programming learning\Code\C - Code\test_5_9\test_5_9\test.c(217,32): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
   test_5_9.vcxproj -> G:\Programming learning\Code\C - Code\test_5_9\Debug\test_5_9.exe

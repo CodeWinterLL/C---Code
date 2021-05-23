@@ -1,0 +1,4 @@
+﻿  test.c
+G:\Programming learning\Code\C - Code\test_5_23\test_5_23\test.c(7,9): warning C4477: “printf”: 格式字符串“%f”需要类型“double”的参数，但可变参数 1 拥有了类型“int”
+G:\Programming learning\Code\C - Code\test_5_23\test_5_23\test.c(14,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“double”
+  test_5_23.vcxproj -> G:\Programming learning\Code\C - Code\test_5_23\Debug\test_5_23.exe

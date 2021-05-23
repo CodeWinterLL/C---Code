@@ -159,11 +159,71 @@
 //}
 
 /*有歧义的表达式*/
+//int main()
+//{
+//	int i = 1;
+//	int ret = (++i) + (++i) + (++i);
+//	printf("%d\n", ret);
+//	printf("%d\n", i);
+//	return 0;
+//}
+
+
+//初阶指针
+
+
+//求Sn=a+aa+aaa+aaaa+aaaaa的前5项之和，其中a是一个数字
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 0;
+//	int n = 0;
+//	printf("请输入要计算数字几的前多少项和：");
+//	scanf("%d %d", &a, &n);
+//	int Sn = 0;
+//	int i = 0;
+//	for (i = 0; i < n; i++)
+//	{
+//		Sn += a;
+//		a = a * 10 + a;
+//	}
+//	printf("Sn = %d", Sn);
+//	return 0;
+//}
+
+//打印水仙花数
+#include<stdio.h>
+#include<math.h>
 int main()
 {
-	int i = 1;
-	int ret = (++i) + (++i) + (++i);
-	printf("%d\n", ret);
-	printf("%d\n", i);
+	// 1、判断该数是几位数
+	// 2、求该数的各位数（个、十、白……）的次方之和
+	// 3、该数本身和次方之和进行比较，判断是否是水仙花数
+	int i = 0;
+	for (i = 0; i <= 100000; i++)  // 产生0~100000之间的数字
+	{
+		int temp = i;
+		int sum = 0;
+		// 1、判断该数是几位数
+		int count = 1;
+		while (temp = temp / 10)  // 注意这里 temp 的值被改变了，不是原本的值了
+		{
+			count++;  // 注意计算每一个数时都是一个新的 count 值
+		}
+		// 2、求该数的各位数（个、十、白……）的次方之和
+		temp = i;
+		while (temp)
+		{
+			sum += pow(temp % 10, count);  // 注意计算每一个数时都是一个新的 sum 值
+			temp = temp / 10;
+		}
+		// 3、该数本身和次方之和进行比较，判断是否是水仙花数
+		if (i == sum)
+		{
+			printf("%d ", i);
+		}
+	}
+
+
 	return 0;
 }

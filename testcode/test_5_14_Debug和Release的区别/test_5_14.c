@@ -24,19 +24,24 @@
 所有偶数位于数组的后半部分。
 */
 #include<stdio.h>
-
+//调整数组中奇数和偶数的位置
 void reverse(int arr[], int temp[], int size)
 {
 	int i = 0;
+	int j = 0;
+	int k = 0;
 	for (i = 0; i < size; i++)
 	{
+		// 找出数组中的奇数放到temp首端
 		if (arr[i] % 2 == 1)
 		{
-			temp[i] = arr[i];
+			temp[j] = arr[i];
+			j++;
 		}
-		else
+		else  // 找出数组中的偶数放到temp尾端
 		{
-			temp[size - 1 - i] = arr[i];
+			temp[size - 1 - k] = arr[i];
+			k++;
 		}
 	}
 }
@@ -47,13 +52,23 @@ int main()
 	int temp[10] = { 0 };
 	//求数组长度
 	int size = sizeof(arr) / sizeof(arr[0]);
+	//打印调整前的数组
+	int i = 0;
+	printf("调整前：\n");
+	for (i = 0; i < size; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
 	//调整数组中奇数和偶数的位置
 	reverse(arr, temp, size);
-	//输出数组
-	for (int i = 0; i < size; i++)
+	//打印调整后的数组
+	printf("调整后：\n");
+	for (i = 0; i < size; i++)
 	{
 		arr[i] = temp[i];
 		printf("%d ", arr[i]);
 	}
+	printf("\n");
 	return 0;
 }
