@@ -25,7 +25,7 @@
 */
 #include<stdio.h>
 //调整数组中奇数和偶数的位置
-void reverse(int arr[], int temp[], int size)
+void move(int arr[], int temp[], int size)
 {
 	int i = 0;
 	int j = 0;
@@ -61,7 +61,7 @@ int main()
 	}
 	printf("\n");
 	//调整数组中奇数和偶数的位置
-	reverse(arr, temp, size);
+	move(arr, temp, size);
 	//打印调整后的数组
 	printf("调整后：\n");
 	for (i = 0; i < size; i++)

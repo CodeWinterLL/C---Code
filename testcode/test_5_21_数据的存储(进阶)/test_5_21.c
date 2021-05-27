@@ -50,6 +50,7 @@
 //	return 0;
 //}
 
+//打印杨辉三角，算法二：
 //#include <stdio.h>
 //int main()
 //{

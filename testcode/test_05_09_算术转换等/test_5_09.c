@@ -1,15 +1,16 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 
 //作业八：写一个函数打印arr数组的内容，不使用数组下标，使用指针。arr是一个整型一维数组。
+
 //#include<stdio.h>
-//
 //void print(int* str, int size)
 //{
 //	int i = 0;
 //	for (i = 0; i < size; i++)
 //	{
-//		printf("%d ", *str);
-//		str++;
+//		//使用指针的方式遍历字符数组，使用这种方式之后，指针p指向了数组以外的地址，有风险
+//		//推荐使用这种方式* (str + i)，安全有逼格
+//		printf("%d ", *str++);
 //	}
 //	printf("\n");
 //}
@@ -64,51 +65,107 @@
 相等：则为水仙花数
 否则：不是
 */
+//#include<stdio.h>
+//#include<math.h>
+////求num的n次方
+//int function(int num, int n)
+//{
+//	int ret = 1;
+//	int i = 0;
+//	for (i = 0; i < n; i++)
+//	{
+//		ret *= num;
+//	}
+//	return ret;
+//}
+//
+//int main()
+//{
+//	int i = 0;
+//	int j = 0;
+//	//产生出0~100000之间的数字
+//	for (i = 0; i <= 100000; i++)
+//	{
+//		//计算每个数字时都要将其各位数字的次方之和赋值为 0
+//		int sum = 0;
+//		//存放当前数字 i 的值
+//		int temp = i;
+//		//1. 计算 i 的位数
+//		int count = 1;
+//		while (temp / 10)
+//		{
+//			count++;
+//			temp = temp / 10;
+//		}
+//		//2. 获取当前数字的各位数字并计算各位数字的次方之和
+//		temp = i;
+//		for (j = 0; j < count; j++)
+//		{
+//			sum += function(temp % 10, count);
+//			temp = temp / 10;
+//		}
+//		//判断是否是水仙花数
+//		if (sum == i)
+//		{
+//			printf("%d ", i);
+//		}
+//	}
+//	return 0;
+//}
+
+
+//第一次没写出来，自己下来重新练习这两道题：
+
+//求Sn=a+aa+aaa+aaaa+aaaaa的前5项之和，其中a是一个数字
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 0;
+//	int n = 0;
+//	printf("请输入要计算数字几的前多少项和：");
+//	scanf("%d %d", &a, &n);
+//	int Sn = 0;
+//	int i = 0;
+//	for (i = 0; i < n; i++)
+//	{
+//		Sn += a;
+//		a = a * 10 + a;
+//	}
+//	printf("Sn = %d", Sn);
+//	return 0;
+//}
+
+//打印水仙花数
 #include<stdio.h>
 #include<math.h>
-//求num的n次方
-int function(int num, int n)
-{
-	int ret = 1;
-	int i = 0;
-	for (i = 0; i < n; i++)
-	{
-		ret *= num;
-	}
-	return ret;
-}
-
 int main()
 {
+	// 1、判断该数是几位数
+	// 2、求该数的各位数（个、十、白……）的次方之和
+	// 3、该数本身和次方之和进行比较，判断是否是水仙花数
 	int i = 0;
-	int j = 0;
-	//产生出0~100000之间的数字
-	for (i = 0; i <= 100000; i++)
+	for (i = 0; i <= 100000; i++)  // 产生0~100000之间的数字
 	{
-		//计算每个数字时都要将其各位数字的次方之和赋值为 0
-		int sum = 0;
-		//存放当前数字 i 的值
 		int temp = i;
-		//1. 获取当前数字的位数
+		int sum = 0;
+		// 1、判断 i 是几位数
 		int count = 1;
-		while (temp / 10)
+		while (temp = temp / 10)  // 注意这里 temp 的值被改变了，不是原本的值了
 		{
-			count++;
-			temp = temp / 10;
+			count++;  // 注意计算每一个数时都要重新计算 count 值
 		}
-		//2. 获取当前数字的各位数字并计算各位数字的次方之和
+		// 2、求 i 的各位数（个、十、百……）的次方之和
 		temp = i;
-		for (j = 0; j < count; j++)
+		while (temp)
 		{
-			sum += function(temp % 10, count);
+			sum += pow(temp % 10, count);  // 注意计算每一个数时都要重新计算 sum 值
 			temp = temp / 10;
 		}
-		//判断是否是水仙花数
-		if (sum == i)
+		// 3、该数本身和次方之和进行比较，判断是否是水仙花数
+		if (i == sum)
 		{
 			printf("%d ", i);
 		}
 	}
 	return 0;
 }
-

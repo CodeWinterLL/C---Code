@@ -1,2 +1,5 @@
 ﻿  test_5_11.c
-  test_5_11_指针初阶等.vcxproj -> G:\Programming learning\Code\C - Code\testcode\Debug\test_5_11_指针初阶等.exe
+G:\Programming learning\Code\C - Code\testcode\test_5_11_指针初阶等\test_5_11.c(8,2): error C2065: “left”: 未声明的标识符
+G:\Programming learning\Code\C - Code\testcode\test_5_11_指针初阶等\test_5_11.c(9,18): warning C4013: “strlen”未定义；假设外部返回 int
+G:\Programming learning\Code\C - Code\testcode\test_5_11_指针初阶等\test_5_11.c(9,23): error C2065: “left”: 未声明的标识符
+G:\Programming learning\Code\C - Code\testcode\test_5_11_指针初阶等\test_5_11.c(28,6): warning C4013: “gets”未定义；假设外部返回 int
