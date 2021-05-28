@@ -99,16 +99,59 @@
 //}
 
 
-//数组指针
+////数组指针
+//
+//int main()
+//{
+//	//int arr[10] = { 0 };
+//
+//	//arr;  // 数组名是首元素地址 - arr[0]的地址
+//	//&arr; // &arr - 取出的是数组的地址
+//
+//	//int(*p)[10] = &arr;  // p 是一个数组指针 - 里面存放的是数组的地址
+//
+//	//double* arr[5];
+//	//double* (*p)[5] = &arr;
+//
+//
+//	int arr[10] = { 0 };
+//	printf("arr = 0x%p\n", arr);
+//	printf("&arr = 0x%p\n", &arr);
+//
+//	printf("arr+1 = 0x%p\n", arr + 1);
+//	printf("&arr+1 = 0x%p\n", &arr + 1);
+//	
+// 
+//  int arr[10] = { 0 };
+//	int* p1 = arr;
+//	int(*p2)[10] = &arr;
+//	printf("p1 = 0x%p\n", p1);
+//	printf("p2 = 0x%p\n", p2);
+//
+//	printf("p1+1 = 0x%p\n", p1 + 1);
+//	printf("p2+1 = 0x%p\n", p2 + 1);
+//	
+//  return 0;
+//}
 
 int main()
 {
-	int arr[10] = { 0 };
+	//int arr[10] = { 0 };
+	////我们一般很少这样写代码
+	//int(*p)[10] = &arr;
 
-	arr;  // 数组名是首元素地址 - arr[0]的地址
-	&arr; // &arr - 取出的是数组的地址
+	//int i = 0;
+	//for (i = 0; i < 10; i++)
+	//{
+	//	printf("%d ", *((*p) + i));
+	//}
 
-	int(*p)[10] = &arr;  // p 是一个数组指针 - 里面存放的是数组的地址
+	int arr[3][5] = { {1,2,3,4,5},{2,3,4,5,6},{3,4,5,6,7} };
+
+	printf("arr = 0x%p\n", arr);
+	printf("arr+1 = 0x%p\n", arr + 1);
+
+
 
 	return 0;
 }
