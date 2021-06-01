@@ -1,2 +1,5 @@
 ﻿  test.c
+G:\Programming learning\Code\C - Code\test_5_30\test_5_30\test.c(135,16): warning C4018: “<”: 有符号/无符号不匹配
+G:\Programming learning\Code\C - Code\test_5_30\test_5_30\test.c(159,16): warning C4018: “<”: 有符号/无符号不匹配
+G:\Programming learning\Code\C - Code\test_5_30\test_5_30\test.c(162,17): warning C4018: “<”: 有符号/无符号不匹配
   test_5_30.vcxproj -> G:\Programming learning\Code\C - Code\test_5_30\Debug\test_5_30.exe
