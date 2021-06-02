@@ -134,51 +134,99 @@
 //  return 0;
 //}
 
-void print1(int arr[][5], int row, int col)
+//void print1(int arr[][5], int row, int col)
+//{
+//	int i = 0;
+//	int j = 0;
+//	for (i = 0; i < row; i++)
+//	{
+//		for (j = 0; j < col; j++)
+//		{
+//			printf("%d ", arr[i][j]);
+//		}
+//		printf("\n");
+//	}
+//}
+//
+//void print2(int(*p)[5], int row, int col)
+//{
+//	int i = 0;
+//	int j = 0;
+//	for (i = 0; i < row; i++)
+//	{
+//		for (j = 0; j < col; j++)
+//		{
+//			printf("%d ", *(*(p + i) + j));
+//		}
+//		printf("\n");
+//	}
+//}
+//
+//int main()
+//{
+//	//int arr[10] = { 0 };
+//	////我们一般很少这样写代码
+//	//int(*p)[10] = &arr;
+//
+//	//int i = 0;
+//	//for (i = 0; i < 10; i++)
+//	//{
+//	//	printf("%d ", *((*p) + i));
+//	//}
+//
+//	int arr[3][5] = { {1,2,3,4,5},{2,3,4,5,6},{3,4,5,6,7} };
+//	//printf("arr = 0x%p\n", arr);
+//	//printf("arr+1 = 0x%p\n", arr + 1);
+//	//print1(arr, 3, 5);
+//	print2(arr, 3, 5);
+//
+//	
+//	return 0;
+//}
+
+
+
+//void test(int arr[3][5])//ok？
+//{}
+//void test(int arr[][])//ok？
+//{}
+//void test(int arr[][5])//ok？
+//{}
+////总结：二维数组传参，函数形参的设计只能省略第一个[]的数字。
+////因为对一个二维数组，可以不知道有多少行，但是必须知道一行多少元素。
+////这样才方便运算。
+//void test(int* arr)//ok？
+//{}
+//void test(int* arr[5])//ok？
+//{}
+//void test(int(*arr)[5])//ok？
+//{}
+//void test(int** arr)//ok？
+//{}
+//int main()
+//{
+//	int arr[3][5] = { 0 };
+//	test(arr);
+//}
+
+
+
+#include <stdio.h>
+void print(int* p, int num)
 {
 	int i = 0;
-	int j = 0;
-	for (i = 0; i < row; i++)
+	for (i = 0; i < num; i++)
 	{
-		for (j = 0; j < col; j++)
-		{
-			printf("%d ", arr[i][j]);
-		}
-		printf("\n");
+		printf("%d\n", *(p + i));
 	}
 }
-
-void print2(int(*p)[5], int row, int col)
-{
-	int i = 0;
-	int j = 0;
-	for (i = 0; i < row; i++)
-	{
-		for (j = 0; j < col; j++)
-		{
-			printf("%d ", *(*(p + i) + j));
-		}
-		printf("\n");
-	}
-}
-
 int main()
 {
-	//int arr[10] = { 0 };
-	////我们一般很少这样写代码
-	//int(*p)[10] = &arr;
-
-	//int i = 0;
-	//for (i = 0; i < 10; i++)
-	//{
-	//	printf("%d ", *((*p) + i));
-	//}
-
-	int arr[3][5] = { {1,2,3,4,5},{2,3,4,5,6},{3,4,5,6,7} };
-	//printf("arr = 0x%p\n", arr);
-	//printf("arr+1 = 0x%p\n", arr + 1);
-	//print1(arr, 3, 5);
-	print2(arr, 3, 5);
-
+	int arr[10] = { 0,1,2,3,4,5,6,7,8,9 };
+	int* p = arr;
+	int num = sizeof(arr) / sizeof(arr[0]);
+	
+	print(p, num);  // 一级指针 p，传给函数
+	
 	return 0;
 }
