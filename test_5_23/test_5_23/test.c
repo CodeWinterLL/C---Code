@@ -211,22 +211,42 @@
 
 
 
-#include <stdio.h>
-void print(int* p, int num)
+//#include <stdio.h>
+//void print(int* p, int num)
+//{
+//	int i = 0;
+//	for (i = 0; i < num; i++)
+//	{
+//		printf("%d\n", *(p + i));
+//	}
+//}
+//int main()
+//{
+//	int arr[10] = { 0,1,2,3,4,5,6,7,8,9 };
+//	int* p = arr;
+//	int num = sizeof(arr) / sizeof(arr[0]);
+//	
+//	print(p, num);  // 一级指针 p，传给函数
+//	
+//	return 0;
+//}
+
+#include<stdio.h>
+
+void test(int** p) {}  // test 函数能接收哪些参数呢？
+
+int mian()
 {
-	int i = 0;
-	for (i = 0; i < num; i++)
-	{
-		printf("%d\n", *(p + i));
-	}
-}
-int main()
-{
-	int arr[10] = { 0,1,2,3,4,5,6,7,8,9 };
-	int* p = arr;
-	int num = sizeof(arr) / sizeof(arr[0]);
-	
-	print(p, num);  // 一级指针 p，传给函数
-	
+	int n = 10;
+	int* p1 = &n;
+	int** p2 = &p1;
+
+	test(p2);  // 传二级指针
+
+	test(&p1);  // 传一级指针的地址
+
+	int* arr[5] = { 0 };
+	test(arr);  // 传存放一级指针的数组首元素的地址
+
 	return 0;
 }
