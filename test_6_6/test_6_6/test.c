@@ -2,16 +2,13 @@
 
 
 #include<stdio.h>
+#include<string.h>
 int main()
 {
-	int s1 = 1;
-	int s2 = 2;
+	char arr1[10] = "abcd\0#####";
+	char arr2[] = "ef";
 
-	while (s1++ == s2)
-	{
-		s1++;
-		s2++;
-	}
+	strncat(arr1, arr2, 5);
 
-	return 0;
+
 }
